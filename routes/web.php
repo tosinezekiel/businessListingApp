@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('{any?}', 'ViewController@frontend')->where('any', '.*');
+Route::get('/admin/{any?}', 'ViewController@backend')->where('any', '.*');
 Route::get('/', function () {
     return view('welcome');
 });

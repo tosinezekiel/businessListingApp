@@ -24,20 +24,37 @@ Route::namespace('Api')->middleware('auth:api')->group(function(){
     Route::get('/user', 'UserController@userdetails');
     
 });
-Route::namespace('Api\Business')->group(function(){
-    Route::get('/businesses', 'BusinessController@index');
-});
 
 //business route
 Route::namespace('Api\Business')->middleware('auth:api')->group(function(){
     Route::post('/businesses', 'BusinessController@create');
-    Route::get('/businesses/{business}', 'BusinessController@show');
     Route::post('/businesses/{business}', 'BusinessController@update');
     Route::delete('/businesses/{business}', 'BusinessController@delete');
     Route::get('/businesses/{business}/disable', 'BusinessController@disable');
+    Route::get('/businesses/{business}/enable', 'BusinessController@enable');
+    Route::get('/businesses/admin', 'BusinessController@getActiveBusinesses');
+    Route::get('/businesses/{id}', 'BusinessController@showSingle');
 });
-
+Route::namespace('Api\Business')->group(function(){
+    Route::get('/businesses/active', 'BusinessController@getActiveBusinesses');
+    Route::get('/businesses/search/{search}', 'BusinessController@search');
+    Route::post('/review', 'BusinessController@addReview');
+    Route::get('/businesses/{id}', 'BusinessController@showSingle');
+});
+    
 //category routes
 Route::namespace('Api\Category')->middleware('auth:api')->group(function(){
     Route::post('/categories', 'CategoryController@create');
+    Route::get('/categories', 'CategoryController@index');
+    Route::delete('/categories/{category}', 'CategoryController@delete');
 });
+Route::namespace('Api\Category')->group(function(){
+    Route::post('/categories', 'CategoryController@create');
+    Route::get('/categories', 'CategoryController@index');
+    Route::delete('/categories/{category}', 'CategoryController@delete');
+});
+
+Route::namespace('Api')->middleware('auth:api')->group(function(){
+    Route::post('/logout', 'LoginController@logout');
+});
+

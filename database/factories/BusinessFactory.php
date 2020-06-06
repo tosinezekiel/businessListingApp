@@ -10,6 +10,9 @@ $factory->define(Business::class, function (Faker $faker) {
         'name' => $faker->company,
         'description' => $faker->sentence(),
         'phone' => $faker->e164PhoneNumber,
-        'url' => $faker->url
+        'url' => 'http://testurl.com/',
+        'email' => $faker->email,
+        'status' => 1,
+        'views' => rand(0,40)
     ];
 });

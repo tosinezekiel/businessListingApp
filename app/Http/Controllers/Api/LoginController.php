@@ -16,19 +16,26 @@ class LoginController extends Controller
             return response(['message'=>'invalid credentials', 'status'=> false]);
         }
         $access_token = auth()->user()->createToken('authToken')->accessToken;
-
         return response([
                 'user_id'    => auth()->user()->id,
                 'token'      => $access_token,
                 'name' => auth()->user()->name,
-                'email'  => auth()->user()->email
+                'email'  => auth()->user()->email,
+                'status' => true
             ]
         );
     }
 
+    public function logout(Request $request){
+        if (auth()->check()) {
+            auth()->user()->token()->revoke();
+            return response(['success'=>true]);
+        }
+        return response(['error'=>'something went wrong']);
+    }
     private function validateLoginDetails(){
         return request()->validate([
-            'email'    => 'email|required',
+            'email'    => 'required|email',
             'password' => 'required',
         ]);
     }

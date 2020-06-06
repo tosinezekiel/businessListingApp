@@ -11,7 +11,7 @@ class BusinessSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Business::class, 5)->create()->each(function ($u) {
+        factory(App\Business::class, 12)->create()->each(function ($u) {
             $u->categories()->save(factory(App\Category::class)->make());
             $u->images()->save(factory(App\Image::class)->make());
         });

@@ -44,6 +44,48 @@ class AddressSeeder extends Seeder
         	'city' => 'Lekki',
         	'state' => 'Lagos',
         	'country' => 'Nigeria'
+		]);
+		DB::table('addresses')->insert([
+        	'business_id' => 6,
+        	'city' => 'Lekki',
+        	'state' => 'Lagos',
+        	'country' => 'Nigeria'
+		]);
+		DB::table('addresses')->insert([
+        	'business_id' => 7,
+        	'city' => 'Lekki',
+        	'state' => 'Lagos',
+        	'country' => 'Nigeria'
+		]);
+		DB::table('addresses')->insert([
+        	'business_id' => 8,
+        	'city' => 'yaba',
+        	'state' => 'lagos',
+        	'country' => "Nigeria"
         ]);
+    	DB::table('addresses')->insert([
+        	'business_id' => 9,
+        	'city' => 'Agege',
+        	'state' => 'Lagos',
+        	'country' => 'Nigeria'
+        ]);
+    	DB::table('addresses')->insert([
+        	'business_id' => 10,
+        	'city' => 'Oshodi',
+        	'state' => 'Lagos',
+        	'country' => 'Nigeria'
+        ]);
+    	DB::table('addresses')->insert([
+        	'business_id' => 11,
+        	'city' => 'Victoria Island',
+        	'state' => 'Lagos',
+        	'country' => 'Nigeria'
+        ]);
+        DB::table('addresses')->insert([
+        	'business_id' => 12,
+        	'city' => 'Lekki',
+        	'state' => 'Lagos',
+        	'country' => 'Nigeria'
+		]);
     }
 }

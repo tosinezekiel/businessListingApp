@@ -1,100 +1,69 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html dir="ltr" lang="en">
 
-        <title>Laravel</title>
+<!-- Mirrored from grandetest.com/theme/findhouse-html/index9.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 May 2020 21:18:44 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="advanced search custom, agency, agent, business, clean, corporate, directory, google maps, homes, listing, membership packages, property, real estate, real estate agent, realestate agency, realtor">
+<meta name="description" content="FindHouse - Real Estate HTML Template">
+<meta name="CreativeLayers" content="ATFN">
+<!-- css file -->
+<link rel="stylesheet" href="{{asset('css/bootstrap.min.css') }}">
+<!--  --> 
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+<link rel="stylesheet" href="{{asset('css/style.css') }}"> 
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
 
-            .full-height {
-                height: 100vh;
-            }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+<!-- Responsive stylesheet -->
+<link rel="stylesheet" href="{{asset('css/responsive.css') }}">
+<!-- Title -->
 
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
+<!-- Favicon -->
+<link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
+<link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" />
+<!-- <link href="{{asset('css/app.css')}}" rel="stylesheet"> -->
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+        <div class="wrapper">
+            <div id="app">  
+                <!-- <router-link to="/home">Home</router-link>    -->
+                <router-view></router-view> 
             </div>
         </div>
-    </body>
+
+        <a class="scrollToHome home7" href="#"><i class="flaticon-arrows"></i></a>
+</div>
+<!-- Wrapper End -->
+<!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="js/jquery-3.3.1.js"></script> -->
+<script type="text/javascript" src="{{asset('js/jquery-3.3.1.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery-migrate-3.0.0.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/popper.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.mmenu.all.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/ace-responsive-menu.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/bootstrap-select.min.js')}}"></script>
+<!-- <script type="text/javascript" src="{{asset('js/isotop.js')}}"></script> -->
+<script type="text/javascript" src="{{asset('js/snackbar.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/simplebar.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/parallax.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/scrollto.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery-scrolltofixed-min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.counterup.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/wow.min.js')}}"></script>
+<!-- <script type="text/javascript" src="{{asset('js/progressbar.js')}}"></script> -->
+<script type="text/javascript" src="{{asset('js/slider.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/timepicker.js')}}"></script>
+<!--Custom script for all pages  -->
+<script type="text/javascript" src="{{asset('js/script.js')}}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
+</body>
 </html>
